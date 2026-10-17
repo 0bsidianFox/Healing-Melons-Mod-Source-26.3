@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "healing-melons",
+  "version": "${version}",
+  "name": "Healing Melons",
+  "description": "Makes vanilla glistering melon slices edible. Restores 2 hunger points, grants Regeneration I for 5 seconds, and can be eaten at full hunger.",
+  "authors": [
+    "0bsidianFox"
+  ],
+  "license": "CC0-1.0",
+  "icon": "assets/healing-melons/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.timothy.healingmelons.HealingMelons"
+    ],
+    "client": [
+      "com.timothy.healingmelons.client.HealingMelonsClient"
+    ]
+  },
+  "mixins": [
+    "healing-melons.mixins.json",
+    {
+      "config": "healing-melons.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
